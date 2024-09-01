@@ -1,16 +1,16 @@
 ﻿namespace BasicMinimalApi;
 
-public class NickLoggerProvider : ILoggerProvider
+public class CustomLoggerProvider : ILoggerProvider
 {
     public void Dispose() { }
 
     public ILogger CreateLogger(string categoryName)
     {
-        return new NickLogger();
+        return new CustomLogger();
     }
 }
 
-public class NickLogger : ILogger
+public class CustomLogger : ILogger
 {
     public IDisposable? BeginScope<TState>(TState state) where TState : notnull
     {

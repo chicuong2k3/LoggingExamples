@@ -6,7 +6,7 @@ if (builder.Environment.IsDevelopment())
 {
     builder.Logging.ClearProviders();
     //builder.Logging.AddConsole();
-    builder.Logging.AddProvider(new NickLoggerProvider());
+    builder.Logging.AddProvider(new CustomLoggerProvider());
 }
 else
 {
